@@ -1,9 +1,5 @@
 You might think AI is a recent technology developed in the 2000s, but that's not entirely true. AI has a much longer journey, starting in the 1950s and evolving steadily ever since. The early pioneers who first developed AI were Alan Turing and Marvin Minsky.
 
-
-
-
-
 The evolution of AI has been a fascinating journey, marked by both significant leaps and periods of stagnation. Here's a brief overview:
 
 Early Days (1950s-1970s): The Seeds of Intelligence
