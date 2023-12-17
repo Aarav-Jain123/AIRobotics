@@ -39,6 +39,11 @@
         .card-img-top {
             margin-top: 5px;
         }
+
+        .some-changes {
+            margin-left: 37%;
+            margin-right: 37%;
+        }
     </style>
     <title>Home | AIRobotics</title>
 </head>
@@ -139,6 +144,78 @@
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="card some-changes" id="review-form">
+            <p style="margin: 20px; text-align: center;">Was this helpful: <input type="radio" id="liked-it" name="review" value="liked-it" onclick="popForm()">
+                <label for="liked-it">Liked it</label>
+                <input type="radio" id="not-helpful" name="review" value="not-helpful" onclick="poppForm()">
+                <label for="not-helpful">Not helpful</label><br><br>
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const likeForm = `            <div class="container min-vh-100 justify-content-center align-items-center">
+                <form method="post" action="/"">
+                    {%csrf_token%}
+        
+                    <div class="form-group mb-3">
+                        <label for="fnmae">Name</label>
+                        <input type="text" class="form-control" id="fname" name='fname' placeholder="First Name">
+                    </div>
+        
+                    <div class="form-group mb-3">
+                        <label for="lname">Class and section</label>
+                        <input type="text" class="form-control" id="class-and-section" name='class-and-section' placeholder="Class and section">
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Some recommendations</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">I like the article but it could be better.</textarea>
+                      </div>
+        
+                    <div class="form-group text-center mb-3" style="margin-top: 5px;">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>`;
+
+            const dislikeForm = `            <div class="container min-vh-100 justify-content-center align-items-center">
+                <form method="post" action="/"">
+                    {%csrf_token%}
+        
+                    <div class="form-group mb-3">
+                        <label for="fnmae">Name</label>
+                        <input type="text" class="form-control" id="fname" name='fname' placeholder="First Name">
+                    </div>
+        
+                    <div class="form-group mb-3">
+                        <label for="lname">Class and section</label>
+                        <input type="text" class="form-control" id="class-and-section" name='class-and-section' placeholder="Class and section">
+                    </div>
+        
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Some recommendations</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">I didn't find the form really helpful but it could be better.</textarea>
+                      </div>
+        
+                    <div class="form-group text-center mb-3" style="margin-top: 5px;">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>`;
+        
+            function popForm(){
+                const target = document.querySelector('#review-form');
+                target.innerHTML += likeForm;
+            }
+
+            function poppForm(){
+                const target = document.querySelector('#review-form');
+                target.innerHTML += dislikeForm;
+            }
+    </script>
 </body>
 
 </html>
