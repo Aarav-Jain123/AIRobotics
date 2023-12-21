@@ -1,0 +1,30 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+nav {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.hover-activity:hover {
+    background-color: blue;
+    color: white;
+}
+
+.card {
+    margin: 10px;
+    /* display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap; */
+}
+
+.card-img-top {
+    margin-top: 5px;
+}
+
+.some-changes {
+    margin-left: 37%;
+    margin-right: 37%;
+}
